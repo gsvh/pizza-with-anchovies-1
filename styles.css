@@ -1,0 +1,70 @@
+h1 {
+  font-size: 2em; /* Reduced from 4em for smaller screens */
+}
+
+p {
+  font-size: 1em; /* Adjusted for readability on smaller screens */
+}
+
+body {
+  margin: 0;
+  background-color: #051011;
+  color: white;
+  font-family: Arial, sans-serif; /* Ensure consistent font across devices */
+}
+
+#slides-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.slide {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content vertically in the slide */
+  justify-content: center; /* Center content horizontally in the slide */
+  padding: 20px; /* Add padding for smaller screens */
+}
+
+.title,
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90%; /* Increase width for smaller screens to use more space */
+  max-width: 600px; /* Limit maximum width for larger screens */
+  text-align: center; /* Center text for better readability */
+}
+
+.content img {
+  max-width: 100%; /* Ensure images are not wider than the screen */
+  height: auto; /* Maintain aspect ratio */
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3em; /* Larger font size for tablets and desktops */
+  }
+
+  p {
+    font-size: 1.2em; /* Slightly larger paragraph text for readability */
+  }
+
+  .content {
+    width: 60%; /* Narrower content area for larger screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 4em; /* Restore original font size for large desktop screens */
+  }
+
+  p {
+    font-size: 1.4em; /* Restore original paragraph text size */
+  }
+}

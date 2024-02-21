@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Welcome",
+    "content": []
+  },
+  {
+    "title": "On the menu",
+    "content": [
+      "Introduction to PWAs",
+      "Integrating PWAs with Modern Development",
+      "Data Handling and Storage",
+      "Enhancing User Engagement",
+      "Testing and Debugging"
+    ]
+  },
+  {
+    "title": "About this PWA",
+    "content": [
+      "Built with HTML, JavaScript & CSS",
+      "Emphasize on the fundamentals"
+    ]
+  },
+  {
+    "title": "",
+    "content": []
+  },
+  {
+    "title": "",
+    "content": []
+  },
+  {
+    "title": "",
+    "content": []
+  },
+  {
+    "title": "",
+    "content": []
+  },
+  {
+    "title": "",
+    "content": []
+  },
+  {
+    "title": "",
+    "content": []
+  }
+]

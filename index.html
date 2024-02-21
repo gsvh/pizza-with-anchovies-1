@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>230224.1</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="manifest" href="/manifest.json" />
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js').then(
+            (registration) => {
+              // Registration was successful
+              console.log(
+                'ServiceWorker registration successful with scope: ',
+                registration.scope
+              )
+            },
+            (err) => {
+              // registration failed :(
+              console.log('ServiceWorker registration failed: ', err)
+            }
+          )
+        })
+      }
+    </script>
+  </head>
+  <body>
+    <div id="slides-container">
+      <div class="slide">
+        <div class="title">
+          <h1>Pizza With Anchovies</h1>
+        </div>
+        <div class="content">
+          <img src="./pwa.webp" alt="Pizza With Anchovies" />
+        </div>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
