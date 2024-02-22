@@ -14,14 +14,40 @@ function generateSlides(slidesData) {
     slideElement.appendChild(titleContainer)
 
     // Add content
-    const contentContainer = document.createElement('div')
-    contentContainer.className = 'content'
-    slide.content.forEach((contentItem) => {
-      const contentElement = document.createElement('p')
-      contentElement.textContent = contentItem
-      contentContainer.appendChild(contentElement)
-    })
-    slideElement.appendChild(contentContainer)
+    if (slide.content?.length) {
+      const contentContainer = document.createElement('div')
+      contentContainer.className = 'content'
+      slide.content.forEach((contentItem) => {
+        const contentElement = document.createElement('p')
+        contentElement.textContent = contentItem
+        contentContainer.appendChild(contentElement)
+      })
+      slideElement.appendChild(contentContainer)
+    }
+
+    // Add unordered list
+    if (slide.list?.length) {
+      const listContainer = document.createElement('ul')
+      slide.list.forEach((listItem) => {
+        const listItemElement = document.createElement('li')
+        listItemElement.textContent = listItem
+        listContainer.appendChild(listItemElement)
+      })
+      slideElement.appendChild(listContainer)
+    }
+
+    // Add links
+    if (slide.links?.length) {
+      const linksContainer = document.createElement('div')
+      linksContainer.className = 'links'
+      slide.links.forEach((link) => {
+        const linkElement = document.createElement('a')
+        linkElement.textContent = link.title
+        linkElement.href = link.url
+        linksContainer.appendChild(linkElement)
+      })
+      slideElement.appendChild(linksContainer)
+    }
 
     slidesContainer.appendChild(slideElement)
   })

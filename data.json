@@ -1,7 +1,7 @@
 [
   {
-    "title": "Welcome",
-    "content": []
+    "title": "Welcome to my restaurant",
+    "content": ["I mean Dev Chat"]
   },
   {
     "title": "On the menu",
@@ -17,31 +17,67 @@
     "title": "About this PWA",
     "content": [
       "Built with HTML, JavaScript & CSS",
-      "Emphasize on the fundamentals"
+      "Emphasize on the fundamentals:",
+      "Web App Manifest",
+      "Service Workers"
     ]
   },
   {
-    "title": "",
-    "content": []
+    "title": "What makes a PWA a PWA?",
+    "list": [
+      "Progressive",
+      "Responsive",
+      "Connectivity independent",
+      "App-like",
+      "Installable",
+      "Linkable"
+    ]
   },
   {
-    "title": "",
-    "content": []
+    "title": "Web App Manifest",
+    "list": [
+      "This is what makes your web app installable",
+      "A JSON file that tells the browser about your web application",
+      "Contains metadata about the application",
+      "Defines how the application should behave when 'installed' on the user's device"
+    ]
   },
   {
-    "title": "",
-    "content": []
+    "title": "Service Workers",
+    "list": [
+      "A script that your browser runs in the background",
+      "Separate from the web page",
+      "Can intercept and modify network requests",
+      "Can cache resources"
+    ]
   },
   {
-    "title": "",
-    "content": []
+    "title": "Caching Strategies",
+    "list": [
+      "Cache only",
+      "Network only",
+      "Cache first, falling back to network",
+      "Network first, falling back to cache",
+      "Stale-while-revalidate"
+    ],
+    "links": [
+      {
+        "title": "Service Worker Caching Strategies",
+        "url": "https://developer.chrome.com/docs/workbox/caching-strategies-overview"
+      }
+    ]
+  },
+
+  {
+    "title": "Data Handling and Storage",
+    "content": ["IndexedDB", "Cache API", "Local Storage", "Session Storage"]
   },
   {
-    "title": "",
-    "content": []
+    "title": "Enhancing User Engagement",
+    "content": ["Push Notifications", "Background Sync", "Geolocation"]
   },
   {
-    "title": "",
-    "content": []
+    "title": "Testing and Debugging",
+    "content": ["Lighthouse", "Chrome DevTools", "Workbox"]
   }
 ]

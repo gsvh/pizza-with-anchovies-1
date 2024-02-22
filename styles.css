@@ -2,8 +2,18 @@ h1 {
   font-size: 2em; /* Reduced from 4em for smaller screens */
 }
 
-p {
+p li {
   font-size: 1em; /* Adjusted for readability on smaller screens */
+}
+
+a {
+  color: #21b6ca;
+}
+
+ul li {
+  /* Add additional spacing between list items */
+  margin-bottom: 20px;
+  max-width: 70vw;
 }
 
 body {

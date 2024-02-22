@@ -25,26 +25,29 @@ self.addEventListener('install', (event) => {
   )
 })
 
-// Cache and return requests
+// Network first, falling back on cache
 self.addEventListener('fetch', (event) => {
   event.respondWith(
-    caches.match(event.request).then((response) => {
-      // Cache hit - return response
-      if (response) {
-        return response
-      }
-      // Attempt to fetch from the network
-      return fetch(event.request).catch(() => {
-        // If both the cache and the network are unavailable,
-        // return a simple message directly
+    // Try to fetch the resource from the network
+    fetch(event.request)
+      .then((networkResponse) => {
+        // If the fetch is successful, return the network response
+        return networkResponse
+      })
+      .catch(async () => {
+        // If the network is unavailable, try to get the resource from the cache
+        const cachedResponse = await caches.match(event.request)
+        if (cachedResponse) {
+          // If we have a cached version, return it
+          return cachedResponse
+        }
         return new Response(
-          'The cache is unavailable and you are offline. Please check your internet connection.',
+          'The network is unavailable and no cache entry was found. Please check your internet connection.',
           {
             headers: { 'Content-Type': 'text/plain' },
           }
         )
       })
-    })
   )
 })
 
