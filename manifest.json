@@ -25,14 +25,14 @@
   ],
   "screenshots": [
     {
-      "src": "screenshots/screenshot-desktop.png",
+      "src": "screenshots/wide.png",
       "sizes": "2880x1626",
       "type": "image/png",
       "form_factor": "wide",
       "label": "Desktop view of PWA"
     },
     {
-      "src": "screenshots/screenshot-mobile.png",
+      "src": "screenshots/narrow.png",
       "sizes": "746x1334",
       "type": "image/png",
       "form_factor": "narrow",

@@ -34,8 +34,3 @@ async function loadSlidesData() {
 }
 
 loadSlidesData()
-
-// document.addEventListener('DOMContentLoaded', (event) => {
-//   const slideContainer = document.querySelector('.slide-container')
-
-// })
