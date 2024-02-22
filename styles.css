@@ -16,6 +16,11 @@ ul li {
   max-width: 70vw;
 }
 
+img {
+  width: 30em;
+  height: auto;
+}
+
 body {
   margin: 0;
   background-color: #051011;
@@ -46,13 +51,8 @@ body {
   align-items: center;
   flex-direction: column;
   width: 90%; /* Increase width for smaller screens to use more space */
-  max-width: 600px; /* Limit maximum width for larger screens */
+  max-width: 60%;
   text-align: center; /* Center text for better readability */
-}
-
-.content img {
-  max-width: 100%; /* Ensure images are not wider than the screen */
-  height: auto; /* Maintain aspect ratio */
 }
 
 @media (min-width: 768px) {
