@@ -65,7 +65,11 @@ async function getLocationInformation() {
   const responseData = await response.json()
 
   const locationTag = document.getElementById('location')
-  locationTag.textContent = `Somewhere near ${responseData.city}, ${responseData.region}, ${responseData.country_name}`
+  if (responseData.city) {
+    locationTag.textContent = `Somewhere near ${responseData.city}, ${responseData.region}, ${responseData.country_name}`
+  } else {
+    locationTag.textContent = `Somewhere near I don't know`
+  }
 }
 
 loadSlidesData()
