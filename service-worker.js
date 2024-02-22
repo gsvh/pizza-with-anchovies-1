@@ -12,6 +12,7 @@ const urlsToCache = [
   '/icons/512.png',
   './screenshots/wide.png',
   './screenshots/narrow.png',
+  'https://ipapi.co/json',
 ]
 
 // Install a service worker

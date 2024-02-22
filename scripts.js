@@ -44,6 +44,7 @@ function generateSlides(slidesData) {
         const linkElement = document.createElement('a')
         linkElement.textContent = link.title
         linkElement.href = link.url
+        linkElement.target = '_blank'
         linksContainer.appendChild(linkElement)
       })
       slideElement.appendChild(linksContainer)
@@ -59,4 +60,13 @@ async function loadSlidesData() {
   generateSlides(slidesData)
 }
 
+async function getLocationInformation() {
+  const response = await fetch('https://ipapi.co/json')
+  const responseData = await response.json()
+
+  const locationTag = document.getElementById('location')
+  locationTag.textContent = `Somewhere near ${responseData.city}, ${responseData.region}, ${responseData.country_name}`
+}
+
 loadSlidesData()
+getLocationInformation()
