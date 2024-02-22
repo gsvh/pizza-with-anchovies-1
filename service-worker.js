@@ -47,27 +47,6 @@ self.addEventListener('fetch', (event) => {
     })
   )
 })
-// self.addEventListener('fetch', (event) => {
-//   // Check if this is a request for an image
-//   if (event.request.destination === 'image') {
-//     event.respondWith(
-//       caches.open(CACHE_NAME).then(async (cache) => {
-//         // Go to the cache first
-//         const cachedResponse = await cache.match(event.request.url)
-//         // Return a cached response if we have one
-//         if (cachedResponse) {
-//           return cachedResponse
-//         }
-//         const fetchedResponse = await fetch(event.request)
-//         // Add the network response to the cache for later visits
-//         cache.put(event.request, fetchedResponse.clone())
-//         return fetchedResponse
-//       })
-//     )
-//   } else {
-//     return
-//   }
-// })
 
 self.addEventListener('activate', (event) => {
   // 'activate' event will be fired when the service worker starts to take control of the pages.
