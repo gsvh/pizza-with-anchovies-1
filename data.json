@@ -5,16 +5,18 @@
   },
   {
     "title": "On the menu",
-    "content": [
-      "Introduction to PWAs",
-      "Integrating PWAs with Modern Development",
+    "list": [
+      "Introduction to PWAs (Manifest + Service Workers)",
       "Data Handling and Storage",
-      "Enhancing User Engagement",
-      "Testing and Debugging"
+      "PWAs with Modern Development (The best PWA-stack)",
+      "Vite",
+      "IndexedDB",
+      "SWR",
+      "SIRV"
     ]
   },
   {
-    "title": "About this PWA",
+    "title": "About *this* PWA",
     "content": [
       "Built with HTML, JavaScript & CSS",
       "Emphasize on the fundamentals:",
@@ -70,14 +72,109 @@
 
   {
     "title": "Data Handling and Storage",
-    "content": ["IndexedDB", "Cache API", "Local Storage", "Session Storage"]
+    "content": ["IndexedDB", "Cache API", "Local Storage", "Session Storage"],
+    "links": [
+      {
+        "title": "Storage quotas and eviction criteria",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#how_much_data_can_be_stored"
+      }
+    ]
   },
   {
-    "title": "Enhancing User Engagement",
-    "content": ["Push Notifications", "Background Sync", "Geolocation"]
+    "title": "Local Storage",
+    "content": [
+      "A simple key-value store",
+      "Stores data with no expiration date",
+      "Data is never transmitted to the server",
+      "Limited to 10MB"
+    ]
   },
   {
-    "title": "Testing and Debugging",
-    "content": ["Lighthouse", "Chrome DevTools", "Workbox"]
+    "title": "Session Storage",
+    "content": [
+      "Similar to local storage",
+      "Data is lost when the session ends",
+      "Limited to 5MB"
+    ]
+  },
+  {
+    "title": "Cache API",
+    "list": [
+      "A programmatic API for storing and retrieving responses keyed by a request",
+      "Can be used to cache resources",
+      "Can be used to cache network requests",
+      "For \"normal\" data"
+    ]
+  },
+  {
+    "title": "Best PWA Stack?",
+    "list": ["Vite", "React", "SWR", "IndexedDB"],
+    "content": ["\"We love the SIRV Stack it is the best 🚀\" - Elon Musk"]
+  },
+  {
+    "title": "How to PWA with Vite",
+    "content": ["Use the vite-plugin-pwa plugin"],
+    "list": [
+      "Pass the manifest + files to be cached in the vite.config file",
+      "The plugin automatically generates the service worker",
+      "It's awesome"
+    ],
+    "links": [
+      {
+        "title": "vite-plugin-pwa",
+        "link": "https://vite-pwa-org.netlify.app/"
+      }
+    ]
+  },
+  {
+    "title": "IndexedDB",
+    "list": [
+      "A low-level API for client-side storage of significant amounts of structured data",
+      "IndexedDB is asynchronous",
+      "You can create multiple databases inside of IndexedDB",
+      "Databases have a name and a version",
+      "Inside of each database you can add stores, this is where your data will live.",
+      "Each interaction with a store inside of a database is handled inside of a transaction",
+      "For \"large\" data"
+    ]
+  },
+  {
+    "title": "SWR",
+    "content": [
+      "The name “SWR” is derived from stale-while-revalidate, a HTTP cache invalidation strategy popularized by HTTP RFC 5861. SWR is a strategy to first return the data from cache (stale), then send the fetch request (revalidate), and finally come with the up-to-date data."
+    ],
+    "list": [
+      "Use the SWR hook to fetch data",
+      "It then caches it",
+      "When you need data, SWR returns the cached data while it revalidates in the background",
+      "It's awesome"
+    ],
+    "links": [
+      {
+        "title": "SWR",
+        "link": "https://swr.vercel.app/"
+      }
+    ]
+  },
+  {
+    "title": "What if instead of caching the data we store it in IndexedDB?",
+    "content": [
+      "This legend, piotr-cz, created a simple library to do just that!"
+    ],
+    "links": [
+      {
+        "title": "swr-idb-cache",
+        "link": "https://github.com/piotr-cz/swr-idb-cache"
+      }
+    ]
+  },
+  {
+    "title": "You've been SIRV'd",
+    "links": [
+      {
+        "title": "pwa-swr-idb",
+        "link": "https://github.com/gsvh/pwa-swr-idb"
+      }
+    ]
   }
 ]
