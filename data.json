@@ -108,8 +108,8 @@
   },
   {
     "title": "Best PWA Stack?",
-    "list": ["Vite", "React", "SWR", "IndexedDB"],
-    "content": ["\"We love the SIRV Stack it is the best 🚀\" - Elon Musk"]
+    "content": ["\"We love the SIRV Stack it is the best 🚀\" - Elon Musk"],
+    "list": ["SWR", "IndexedDB", "React", "Vite"]
   },
   {
     "title": "How to PWA with Vite",
