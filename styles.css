@@ -18,6 +18,7 @@ ul li {
 
 img {
   width: 30em;
+  max-width: 100%;
   height: auto;
 }
 
@@ -51,7 +52,7 @@ body {
   align-items: center;
   flex-direction: column;
   width: 90%; /* Increase width for smaller screens to use more space */
-  max-width: 60%;
+  max-width: 80%;
   text-align: center; /* Center text for better readability */
 }
 
